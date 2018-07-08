@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">HorPak</string>
+    <string name="title_activity_main">หน้าหลัก</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_more">More</string>
+    <string name="title_profile">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="agm">อุปกรณ์ดังกล่าวครบถ้วนและอยู่ในสภาพดีพร้อมใช้งาน ถ้าผู้เช่าทำอุปกรณ์เสียหาย หรือชำรุดในระหว่างที่พักอาศัยอยู่ ข้าพเจ้าจะรับผิดชอบ และยอมเสียค่าใช้จ่ายในรายการที่เสียหาย และข้าพเจ้าได้อ่านระเบียบในการพักอาศัยร่วมกับผู้เช่าห้อง และพร้อมที่จะปฏืบัติตามกฏระเบียบอย่างเคร่งครัด จึงลงลายมือชื่อไว้เป็นหลักฐาน</string>
+    <string name="agm_name">ข้าพเจ้า</string>
+    <string name="agm_last">นามสกุล</string>
+    <string name="agm_homeid">ที่อยู่ตามทะเบียนบ้าน</string>
+    <string name="agm_tel">เบอร์โทรศัพท์มือถือ</string>
+    <string name="agm_approve">ได้ตกลงทำสัญญาเช่าบ้านศิวกานต์</string>
+    <string name="agm_startdate">โดยเริ่มเข้าอาศัยอยู่ในวันที่</string>
+    <string name="agm_before">ก่อนเข้าพักได้สำรวจอุปกรณ์ภายในห้องพัก ซึ่งประกอบด้วย</string>
+    <string name="agm_rentel">ค่าเช่าเดือนละ</string>
+    <string name="agm_dip">ค่ามัดจำ</string>
+    <string name="agm_payday">ชำระค่าเช่าทุกวันที่</string>
+    <string name="agm_payday2">ของทุกเดือน(หากเกินปรับวันละ 50 บาท)</string>
+
+    <string name="dark_theme">Dark Theme</string>
+    <string name="light_theme">Light Theme</string>
+    <string name="custom_theme">Custom Theme</string>
+    <string name="date">Date</string>
+
+
+</resources>

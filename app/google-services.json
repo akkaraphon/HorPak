@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "168949600757",
+    "firebase_url": "https://horpak-f0717.firebaseio.com",
+    "project_id": "horpak-f0717",
+    "storage_bucket": "horpak-f0717.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168949600757:android:f35fe8ef9bd73ef9",
+        "android_client_info": {
+          "package_name": "com.example.amin.horpak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168949600757-11pd4v242vt5bkcvrno3f779th9kiv5s.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "168949600757-11pd4v242vt5bkcvrno3f779th9kiv5s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSIO2U90mkY5HvC9ftKG7coZMDPznTB0o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

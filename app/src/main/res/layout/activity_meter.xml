@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MeterActivity">
+
+    <TextView
+        android:id="@+id/Room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meter"
+        android:textSize="50sp" />
+
+    <LinearLayout
+        android:id="@+id/waterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60sp"
+        android:layout_marginRight="70sp"
+        android:layout_marginTop="80sp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtWater"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:hint="Waterunit"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="10sp"
+            android:textSize="16sp"
+            android:layout_weight=".3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="1หน่วย/6บาท"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/powerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60sp"
+        android:layout_marginRight="70sp"
+        android:layout_marginTop="15sp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtPower"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:hint="Powerunit"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="10sp"
+            android:textSize="16sp"
+            android:layout_weight=".4"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:text="1หน่วย/6บาท"/>
+
+    </LinearLayout>
+
+
+
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60sp"
+        android:layout_marginRight="70sp"
+        android:layout_marginTop="15sp"
+        android:background="@drawable/btn_login"
+        android:text="Submit"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+
+</LinearLayout>
