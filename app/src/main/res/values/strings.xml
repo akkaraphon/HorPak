@@ -24,6 +24,7 @@
     <string name="agm_tel">เบอร์โทรศัพท์มือถือ</string>
     <string name="agm_approve">ได้ตกลงทำสัญญาเช่าบ้านศิวกานต์</string>
     <string name="agm_startdate">โดยเริ่มเข้าอาศัยอยู่ในวันที่</string>
+    <string name="agm_endtdate">ถึงวันที่</string>
     <string name="agm_before">ก่อนเข้าพักได้สำรวจอุปกรณ์ภายในห้องพัก ซึ่งประกอบด้วย</string>
     <string name="agm_rentel">ค่าเช่าเดือนละ</string>
     <string name="agm_dip">ค่ามัดจำ</string>

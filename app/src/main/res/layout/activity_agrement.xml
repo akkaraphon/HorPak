@@ -119,6 +119,7 @@
                         android:layout_marginRight="10dp"
                         android:text="3"
                         android:textStyle="bold" />
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -134,6 +135,27 @@
 
                 <TextView
                     android:id="@+id/startdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="date"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dateout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agm_endtdate" />
+
+                <TextView
+                    android:id="@+id/enddate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -169,6 +191,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/txt3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/agm_rentel" />
@@ -213,6 +236,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/txt1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -284,7 +308,7 @@
                     android:id="@+id/btnSubmit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Button" />
+                    android:text="เสร็จสิ้น" />
 
             </LinearLayout>
 

@@ -122,6 +122,7 @@ public class NotiFragment extends Fragment {
         adapter = new NotiAdapter(getContext(), notiModel.getDetail(), new NotiAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(List<NotiModel.DetailBean> noti, int position) {
+                StaticClass.TYPE_ROOM = noti.get(position).getRental_type();
                 Log.d(TAG, "onItemClick: " + noti.get(position).getID_rentel() + " " + noti.get(position).getID_Room());
                 connect.postAgrement(callback, noti.get(position).getID_rentel(), noti.get(position).getID_Room());
             }

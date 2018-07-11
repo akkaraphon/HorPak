@@ -4,16 +4,18 @@ public class LoginModel {
 
     /**
      * StatusID : 1
-            * Error :
-            * ID : root
+     * Error :
+     * ID : root
+     * ID_mem : 1
      * Name_Mem : สาม
-     * LName_Mem : null
-            * status : สมาชิก
+     * LName_Mem :
+     * status : ผู้เช่ารายเดือน
      */
 
     private String StatusID;
     private String Error;
     private String ID;
+    private String ID_mem;
     private String Name_Mem;
     private String LName_Mem;
     private String status;
@@ -40,6 +42,14 @@ public class LoginModel {
 
     public void setID(String ID) {
         this.ID = ID;
+    }
+
+    public String getID_mem() {
+        return ID_mem;
+    }
+
+    public void setID_mem(String ID_mem) {
+        this.ID_mem = ID_mem;
     }
 
     public String getName_Mem() {

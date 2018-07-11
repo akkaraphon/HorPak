@@ -23,6 +23,7 @@ import java.io.IOException;
 public class StaticClass {
     public static String URL = "http://192.168.43.14/Project/api/";
     public static int MOVE = 0;
+    public static String TYPE_ROOM;
     public static LoginModel loginModel;
     public static RoomModel roomModel;
     public static RoomModel roomModelAll;
@@ -30,6 +31,7 @@ public class StaticClass {
     public static ProfileModel profileModel;
     public static AgrementModel agrement;
     public static RoomModel RoomRentModel;
+
 
     public static void toast(Context context, String string) {
         Toast toast = Toast.makeText(context, string, Toast.LENGTH_SHORT);

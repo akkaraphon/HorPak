@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.amin.horpak.API.ConnectionManager;
@@ -20,7 +21,8 @@ import retrofit.Retrofit;
 
 
 public class AgrementActivity extends AppCompatActivity {
-    TextView fname, lname, rentel, dip, address, room, floor, startdate, payday, fur;
+    TextView fname, lname, rentel, dip, address, room, floor, startdate, payday, fur, enddate, txt3;
+    LinearLayout dateout, txt1;
     Button mRent, mPayan, mUpID, mSubmit;
     String TAG = "AgrementActivity";
     ConnectionManager connect = new ConnectionManager();
@@ -42,7 +44,7 @@ public class AgrementActivity extends AppCompatActivity {
             if (submiModel.getImg_signature_renter().equals("")) {
                 StaticClass.toast(getApplicationContext(), "กรุณาเซ็นสัญญา");
             }
-            if (submiModel.getImg_signature_witness().equals("")) {
+            if (submiModel.getImg_signature_witness().equals("") && StaticClass.TYPE_ROOM.equals("รายเดือน")) {
                 StaticClass.toast(getApplicationContext(), "กรุณาเให้พยานซ็นสัญญา");
             }
             if (submiModel.getImg_card().equals("")) {
@@ -66,6 +68,7 @@ public class AgrementActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agrement);
+        dateout = (LinearLayout) findViewById(R.id.dateout);
         fname = (TextView) findViewById(R.id.name);
         lname = (TextView) findViewById(R.id.lastname);
         rentel = (TextView) findViewById(R.id.rentel);
@@ -76,6 +79,9 @@ public class AgrementActivity extends AppCompatActivity {
         startdate = (TextView) findViewById(R.id.startdate);
         payday = (TextView) findViewById(R.id.payday);
         fur = (TextView) findViewById(R.id.fur);
+        enddate = (TextView) findViewById(R.id.enddate);
+        txt1 = (LinearLayout) findViewById(R.id.txt1);
+        txt3 = (TextView) findViewById(R.id.txt3);
         mRent = (Button) findViewById(R.id.btnRent);
         mPayan = (Button) findViewById(R.id.btnPayan);
         mUpID = (Button) findViewById(R.id.btnUpID);
@@ -101,6 +107,13 @@ public class AgrementActivity extends AppCompatActivity {
             }
         } else {
             fur.setText("ไม่มีเฟอร์นิเจอร์");
+        }
+        if (StaticClass.TYPE_ROOM.equals("รายวัน")) {
+            mPayan.setVisibility(View.INVISIBLE);
+            dateout.setVisibility(View.VISIBLE);
+            enddate.setText(StaticClass.agrement.getAgm().getDate_checkout1());
+            txt3.setText("ค่าเช่าวันละ");
+            txt1.setVisibility(View.GONE);
         }
 
         mRent.setOnClickListener(new View.OnClickListener() {

@@ -8,6 +8,7 @@ import com.example.amin.horpak.Model.LogoutModel;
 import com.example.amin.horpak.Model.MoveoutModel;
 import com.example.amin.horpak.Model.NotiModel;
 import com.example.amin.horpak.Model.ProfileModel;
+import com.example.amin.horpak.Model.RentModel;
 import com.example.amin.horpak.Model.RoomModel;
 import com.example.amin.horpak.Model.SubmiModel;
 import com.example.amin.horpak.Model.SubmitNotiModel;
@@ -271,6 +272,29 @@ public class ConnectionManager {
                 } else {
                     //200
                     listener.onResponse(submitNotiModel, retrofit);
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+
+            }
+        });
+
+    }
+
+    public void getRentel(final RentCallbackListener listener, String ID_Mem, String id_room, String Date_checkin) {
+        Call call = con.getRent(ID_Mem,id_room,Date_checkin);
+        call.enqueue(new Callback<RentModel>() {
+            @Override
+            public void onResponse(Response<RentModel> response, Retrofit retrofit) {
+                RentModel rentModel = response.body();
+                if (rentModel == null) {
+                    //404 or the response cannot be converted to User.
+                    ResponseBody responseBody = response.errorBody();
+                } else {
+                    //200
+                    listener.onResponse(rentModel, retrofit);
                 }
             }
 

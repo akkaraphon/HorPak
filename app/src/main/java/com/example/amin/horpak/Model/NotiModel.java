@@ -6,7 +6,7 @@ public class NotiModel {
 
     /**
      * StatusID : 1
-     * Detail : [{"ID_notis":"10","message":"กรุณาอัปโหลดรูปสำเนาบัตรประชาชน","username":"root","method":"upload","table_left":"rentel","leftno":"9","ID_Mem":"1","ID_Room":"61","ID_rentel":"9"},{"ID_notis":"12","message":"กรุณาทำสัญญาเช่า","username":"root","method":"agreement","table_left":"rentel","leftno":"9","ID_Mem":"1","ID_Room":"61","ID_rentel":"9"},{"ID_notis":"13","message":"กรุณาทำสัญญาเช่า","username":"root","method":"agreement","table_left":"rentel","leftno":"10","ID_Mem":"1","ID_Room":"61","ID_rentel":"9"},{"ID_notis":"10","message":"กรุณาอัปโหลดรูปสำเนาบัตรประชาชน","username":"root","method":"upload","table_left":"rentel","leftno":"9","ID_Mem":"1","ID_Room":"50","ID_rentel":"10"},{"ID_notis":"12","message":"กรุณาทำสัญญาเช่า","username":"root","method":"agreement","table_left":"rentel","leftno":"9","ID_Mem":"1","ID_Room":"50","ID_rentel":"10"},{"ID_notis":"13","message":"กรุณาทำสัญญาเช่า","username":"root","method":"agreement","table_left":"rentel","leftno":"10","ID_Mem":"1","ID_Room":"50","ID_rentel":"10"},{"ID_notis":"10","message":"กรุณาอัปโหลดรูปสำเนาบัตรประชาชน","username":"root","method":"upload","table_left":"rentel","leftno":"9","ID_Mem":"1","ID_Room":"60","ID_rentel":"11"},{"ID_notis":"12","message":"กรุณาทำสัญญาเช่า","username":"root","method":"agreement","table_left":"rentel","leftno":"9","ID_Mem":"1","ID_Room":"60","ID_rentel":"11"},{"ID_notis":"13","message":"กรุณาทำสัญญาเช่า","username":"root","method":"agreement","table_left":"rentel","leftno":"10","ID_Mem":"1","ID_Room":"60","ID_rentel":"11"}]
+     * Detail : [{"ID_notis":"124","message":"กรุณาทำสัญญาเช่า","username":"root","method":"agreement","table_left":"rentel","leftno":"24","isActive":"0","link":"","time":"0000-00-00 00:00:00","ID_Mem":"1","ID_Room":"50","ID_rentel":"24","Rental_type":"รายวัน"}]
      */
 
     private String StatusID;
@@ -30,15 +30,19 @@ public class NotiModel {
 
     public static class DetailBean {
         /**
-         * ID_notis : 10
-         * message : กรุณาอัปโหลดรูปสำเนาบัตรประชาชน
+         * ID_notis : 124
+         * message : กรุณาทำสัญญาเช่า
          * username : root
-         * method : upload
+         * method : agreement
          * table_left : rentel
-         * leftno : 9
+         * leftno : 24
+         * isActive : 0
+         * link :
+         * time : 0000-00-00 00:00:00
          * ID_Mem : 1
-         * ID_Room : 61
-         * ID_rentel : 9
+         * ID_Room : 50
+         * ID_rentel : 24
+         * Rental_type : รายวัน
          */
 
         private String ID_notis;
@@ -47,9 +51,13 @@ public class NotiModel {
         private String method;
         private String table_left;
         private String leftno;
+        private String isActive;
+        private String link;
+        private String time;
         private String ID_Mem;
         private String ID_Room;
         private String ID_rentel;
+        private String Rental_type;
 
         public String getID_notis() {
             return ID_notis;
@@ -99,6 +107,30 @@ public class NotiModel {
             this.leftno = leftno;
         }
 
+        public String getIsActive() {
+            return isActive;
+        }
+
+        public void setIsActive(String isActive) {
+            this.isActive = isActive;
+        }
+
+        public String getLink() {
+            return link;
+        }
+
+        public void setLink(String link) {
+            this.link = link;
+        }
+
+        public String getTime() {
+            return time;
+        }
+
+        public void setTime(String time) {
+            this.time = time;
+        }
+
         public String getID_Mem() {
             return ID_Mem;
         }
@@ -121,6 +153,14 @@ public class NotiModel {
 
         public void setID_rentel(String ID_rentel) {
             this.ID_rentel = ID_rentel;
+        }
+
+        public String getRental_type() {
+            return Rental_type;
+        }
+
+        public void setRental_type(String Rental_type) {
+            this.Rental_type = Rental_type;
         }
     }
 }

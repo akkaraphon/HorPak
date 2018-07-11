@@ -6,6 +6,7 @@ import com.example.amin.horpak.Model.LogoutModel;
 import com.example.amin.horpak.Model.MoveoutModel;
 import com.example.amin.horpak.Model.NotiModel;
 import com.example.amin.horpak.Model.ProfileModel;
+import com.example.amin.horpak.Model.RentModel;
 import com.example.amin.horpak.Model.RoomModel;
 import com.example.amin.horpak.Model.SubmiModel;
 import com.example.amin.horpak.Model.SubmitNotiModel;
@@ -77,8 +78,10 @@ public interface APIService {
             @Field("id_rentel") String ID_Rentel);
 
     @FormUrlEncoded
-    @POST("getRentel.php")
-    Call<SubmitNotiModel> getRentel(
-            @Field("id_room") String id_room);
+    @POST("getRent.php")
+    Call<RentModel> getRent(
+            @Field("ID_Mem") String ID_Mem,
+            @Field("id_room") String id_room,
+            @Field("Date_checkin") String Date_checkin);
 
 }
