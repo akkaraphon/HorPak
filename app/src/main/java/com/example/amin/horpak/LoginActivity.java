@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.example.amin.horpak.API.ConnectionManager;
 import com.example.amin.horpak.API.LoginCallbackListener;
 import com.example.amin.horpak.Model.LoginModel;
+import com.example.amin.horpak.Utils.StaticClass;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.squareup.okhttp.ResponseBody;
 

@@ -29,14 +29,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <service
-            android:name=".MyFirebaseMessagingService"
+            android:name=".FCM.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
         <service
-            android:name=".MyFirebaseInstanceIDService"
+            android:name=".FCM.MyFirebaseInstanceIDService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />

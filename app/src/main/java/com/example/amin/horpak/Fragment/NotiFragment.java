@@ -1,4 +1,4 @@
-package com.example.amin.horpak;
+package com.example.amin.horpak.Fragment;
 
 
 import android.content.Intent;
@@ -16,8 +16,11 @@ import com.example.amin.horpak.API.AgrementCallbackListener;
 import com.example.amin.horpak.API.ConnectionManager;
 import com.example.amin.horpak.API.NotiCallbackListener;
 import com.example.amin.horpak.Adapter.*;
+import com.example.amin.horpak.AgrementActivity;
 import com.example.amin.horpak.Model.AgrementModel;
 import com.example.amin.horpak.Model.NotiModel;
+import com.example.amin.horpak.R;
+import com.example.amin.horpak.Utils.StaticClass;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.squareup.okhttp.ResponseBody;
 

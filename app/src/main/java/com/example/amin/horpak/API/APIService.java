@@ -30,8 +30,10 @@ public interface APIService {
             @Field("password") String pass,
             @Field("token") String token);
 
-    @GET("getRoom.php")
-    Call<RoomModel> getRoom();
+    @FormUrlEncoded
+    @POST("getRoom.php")
+    Call<RoomModel> getRoom(
+            @Field("status") String status);
 
     @FormUrlEncoded
     @POST("InsertWP.php")

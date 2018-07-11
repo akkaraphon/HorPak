@@ -1,4 +1,4 @@
-package com.example.amin.horpak;
+package com.example.amin.horpak.Fragment;
 
 
 import android.content.Context;
@@ -8,7 +8,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +19,15 @@ import android.widget.Toast;
 import com.example.amin.horpak.API.ConnectionManager;
 import com.example.amin.horpak.API.LogoutCallbackListener;
 import com.example.amin.horpak.Adapter.MoreAdapter;
+import com.example.amin.horpak.CheckOutListActivity;
 import com.example.amin.horpak.Model.LogoutModel;
+import com.example.amin.horpak.MoveOutActivity;
+import com.example.amin.horpak.PowerActivity;
+import com.example.amin.horpak.R;
+import com.example.amin.horpak.RentRoomActivity;
+import com.example.amin.horpak.Utils.StaticClass;
+import com.example.amin.horpak.UpidActivity;
+import com.example.amin.horpak.WaterActivity;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 import retrofit.Retrofit;

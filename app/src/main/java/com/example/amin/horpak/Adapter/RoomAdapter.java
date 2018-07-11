@@ -50,11 +50,14 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.MenuViewHolder
     }
 
     public class MenuViewHolder extends RecyclerView.ViewHolder {
-        TextView mRoom;
+        TextView mRoom, mPrice, mNameType, mFloor;
 
         public MenuViewHolder(View itemView) {
             super(itemView);
             mRoom = (TextView) itemView.findViewById(R.id.room);
+            mPrice = (TextView) itemView.findViewById(R.id.price);
+            mNameType = (TextView) itemView.findViewById(R.id.name_typeroom);
+            mFloor = (TextView) itemView.findViewById(R.id.floor);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -66,6 +69,9 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.MenuViewHolder
 
         public void setMenu(List<RoomModel.DetailBean> topic, int position) {
             mRoom.setText(topic.get(position).getNo_Room());
+            mPrice.setText(topic.get(position).getPrice() + " บาท");
+            mNameType.setText(topic.get(position).getName_typeroom());
+            mFloor.setText("ชั้น " + topic.get(position).getFloor());
         }
 
     }

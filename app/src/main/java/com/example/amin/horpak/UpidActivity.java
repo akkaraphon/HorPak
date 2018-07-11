@@ -2,11 +2,8 @@ package com.example.amin.horpak;
 
 import android.Manifest;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Build;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +15,7 @@ import android.widget.Toast;
 import com.example.amin.horpak.API.ConnectUpload;
 import com.example.amin.horpak.API.UploadService;
 import com.example.amin.horpak.Model.UpPicModel;
+import com.example.amin.horpak.Utils.StaticClass;
 import com.mindorks.paracamera.Camera;
 
 import java.io.File;

@@ -14,6 +14,7 @@ import com.example.amin.horpak.API.SubmitCallbackListener;
 import com.example.amin.horpak.API.SumitnotiCallbackListener;
 import com.example.amin.horpak.Model.SubmiModel;
 import com.example.amin.horpak.Model.SubmitNotiModel;
+import com.example.amin.horpak.Utils.StaticClass;
 
 import retrofit.Retrofit;
 

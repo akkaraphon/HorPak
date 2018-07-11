@@ -9,7 +9,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 import com.example.amin.horpak.R;
-import com.example.amin.horpak.StaticClass;
+import com.example.amin.horpak.Utils.StaticClass;
 
 public class MoreAdapter extends BaseAdapter {
     private Context mContext;

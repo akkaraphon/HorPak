@@ -12,7 +12,7 @@ import com.example.amin.horpak.API.ConnectionManager;
 import com.example.amin.horpak.API.RoomCallbackListener;
 import com.example.amin.horpak.Adapter.RoomAdapter;
 import com.example.amin.horpak.Model.RoomModel;
-import com.google.firebase.iid.FirebaseInstanceId;
+import com.example.amin.horpak.Utils.StaticClass;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,11 +67,14 @@ public class RentRoomActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rent_room);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                connect.getRoom(roomCallbackListener);
+                connect.getRoom(roomCallbackListener,"blank");
             }
         });
 
@@ -79,13 +82,10 @@ public class RentRoomActivity extends AppCompatActivity {
         adapter = new RoomAdapter(getApplicationContext(),StaticClass.roomModel.getDetail(), new RoomAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(List<RoomModel.DetailBean> topic, int position) {
-//                StaticClass.toast(getApplicationContext(),topic.get(position).getNo_Room());
-//                intent = new Intent(RentRoomActivity.this, MeterActivity.class);
-//                intent.putExtra("type", "water");
-//                intent.putExtra("room", topic.get(position).getNo_Room());
-//                intent.putExtra("td", topic.get(position).getID_Room());
-//                startActivity(intent);
-                StaticClass.toast(getApplicationContext(),StaticClass.roomModel.getDetail().get(position).getID_Room());
+                intent = new Intent(RentRoomActivity.this, RentelActivity.class);
+                intent.putExtra("idRoom", topic.get(position).getID_Room());
+                intent.putExtra("position", position);
+                startActivity(intent);
             }
         });
         mRecyclerView.setAdapter(adapter);
@@ -97,5 +97,11 @@ public class RentRoomActivity extends AppCompatActivity {
                 return 1;
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

@@ -10,21 +10,65 @@
         android:layout_height="match_parent"
         android:background="#eadede"
         android:gravity=""
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#eadede"
+            android:gravity=""
+            android:orientation="horizontal"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/room"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:maxLines="1"
                 android:text="ROOM"
-                android:textSize="50sp" />
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/floor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="floor"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#eadede"
+            android:gravity=""
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="price"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/name_typeroom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="name_typeroom"
+                android:textSize="18sp" />
+
         </LinearLayout>
 
     </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.amin.horpak;
+package com.example.amin.horpak.Fragment;
 
 
 import android.Manifest;
@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.amin.horpak.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;

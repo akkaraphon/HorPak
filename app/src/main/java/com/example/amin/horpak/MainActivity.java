@@ -1,10 +1,7 @@
 package com.example.amin.horpak;
 
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -12,23 +9,23 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-
-import android.widget.TextView;
 
 import com.example.amin.horpak.API.ConnectionManager;
 import com.example.amin.horpak.API.NotiCallbackListener;
 import com.example.amin.horpak.API.ProfileCallbackListener;
 import com.example.amin.horpak.API.RoomCallbackListener;
+import com.example.amin.horpak.Fragment.ChatFragment;
+import com.example.amin.horpak.Fragment.HomeFragment;
+import com.example.amin.horpak.Fragment.MoreFragment;
+import com.example.amin.horpak.Fragment.NotiFragment;
+import com.example.amin.horpak.Fragment.ProfileFragment;
 import com.example.amin.horpak.Model.NotiModel;
 import com.example.amin.horpak.Model.ProfileModel;
 import com.example.amin.horpak.Model.RoomModel;
+import com.example.amin.horpak.Utils.StaticClass;
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.squareup.okhttp.ResponseBody;
 
 import retrofit.Retrofit;
 
@@ -44,6 +41,22 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onResponse(RoomModel roomModel, Retrofit retrofit) {
             StaticClass.roomModel = roomModel;
+//            StaticClass.toast(getApplicationContext(),"ready");
+            Log.d(TAG, "onResponse: ready");
+
+        }
+
+        @Override
+        public void onFailure(Throwable t) {
+            Log.d(TAG, "onFailure: " + t);
+        }
+
+    };
+
+    RoomCallbackListener roomCallbackListener2 = new RoomCallbackListener() {
+        @Override
+        public void onResponse(RoomModel roomModel, Retrofit retrofit) {
+            StaticClass.roomModelAll = roomModel;
 //            StaticClass.toast(getApplicationContext(),"ready");
             Log.d(TAG, "onResponse: ready");
 
@@ -87,11 +100,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d(TAG, "onCreate: token " + FirebaseInstanceId.getInstance().getToken());
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-        connect.getRoom(roomCallbackListener);
+        connect.getRoom(roomCallbackListener,"blank");
+        connect.getRoom(roomCallbackListener2,"all");
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 //        tabLayout.setupWithViewPager(mViewPager,false);
         token = FirebaseInstanceId.getInstance().getToken();

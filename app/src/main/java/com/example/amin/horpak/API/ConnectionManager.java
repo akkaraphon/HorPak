@@ -67,8 +67,8 @@ public class ConnectionManager {
 
     }
 
-    public void getRoom(final RoomCallbackListener listener) {
-        Call call = con.getRoom();
+    public void getRoom(final RoomCallbackListener listener,String status) {
+        Call call = con.getRoom(status);
         call.enqueue(new Callback<RoomModel>() {
             @Override
             public void onResponse(Response<RoomModel> response, Retrofit retrofit) {

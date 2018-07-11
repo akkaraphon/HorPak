@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.example.amin.horpak.Adapter.RoomAdapter;
 import com.example.amin.horpak.Model.RoomModel;
+import com.example.amin.horpak.Utils.StaticClass;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +30,7 @@ public class WaterActivity extends AppCompatActivity {
 //        }
 
         mRecyclerView = (RecyclerView) findViewById(R.id.ReWater);
-        adapter = new RoomAdapter(getApplicationContext(),StaticClass.roomModel.getDetail(), new RoomAdapter.OnItemClickListener() {
+        adapter = new RoomAdapter(getApplicationContext(), StaticClass.roomModelAll.getDetail(), new RoomAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(List<RoomModel.DetailBean> topic, int position) {
                 StaticClass.toast(getApplicationContext(),topic.get(position).getNo_Room());

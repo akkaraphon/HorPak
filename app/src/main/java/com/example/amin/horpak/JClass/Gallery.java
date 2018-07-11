@@ -1,4 +1,4 @@
-package com.example.amin.horpak;
+package com.example.amin.horpak.JClass;
 
 
 import android.app.Activity;
@@ -12,6 +12,8 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.text.TextUtils;
+
+import com.example.amin.horpak.Utils.StaticClass;
 
 import java.io.File;
 import java.util.List;

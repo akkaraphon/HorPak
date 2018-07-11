@@ -1,4 +1,4 @@
-package com.example.amin.horpak;
+package com.example.amin.horpak.Utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -25,6 +25,7 @@ public class StaticClass {
     public static int MOVE = 0;
     public static LoginModel loginModel;
     public static RoomModel roomModel;
+    public static RoomModel roomModelAll;
     public static NotiModel notiModel;
     public static ProfileModel profileModel;
     public static AgrementModel agrement;
