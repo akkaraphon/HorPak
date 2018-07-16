@@ -1,6 +1,7 @@
 package com.example.amin.horpak.API;
 
 import com.example.amin.horpak.Model.AgrementModel;
+import com.example.amin.horpak.Model.DepositModel;
 import com.example.amin.horpak.Model.LoginModel;
 import com.example.amin.horpak.Model.LogoutModel;
 import com.example.amin.horpak.Model.MoveoutModel;
@@ -83,5 +84,11 @@ public interface APIService {
             @Field("ID_Mem") String ID_Mem,
             @Field("id_room") String id_room,
             @Field("Date_checkin") String Date_checkin);
+
+    @FormUrlEncoded
+    @POST("getDeposit.php")
+    Call<DepositModel> getDeposit(
+            @Field("idRoom") String idRoom,
+            @Field("deposit") String deposit);
 
 }

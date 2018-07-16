@@ -3,6 +3,7 @@ package com.example.amin.horpak.API;
 import android.util.Log;
 
 import com.example.amin.horpak.Model.AgrementModel;
+import com.example.amin.horpak.Model.DepositModel;
 import com.example.amin.horpak.Model.LoginModel;
 import com.example.amin.horpak.Model.LogoutModel;
 import com.example.amin.horpak.Model.MoveoutModel;
@@ -68,7 +69,7 @@ public class ConnectionManager {
 
     }
 
-    public void getRoom(final RoomCallbackListener listener,String status) {
+    public void getRoom(final RoomCallbackListener listener, String status) {
         Call call = con.getRoom(status);
         call.enqueue(new Callback<RoomModel>() {
             @Override
@@ -284,7 +285,7 @@ public class ConnectionManager {
     }
 
     public void getRentel(final RentCallbackListener listener, String ID_Mem, String id_room, String Date_checkin) {
-        Call call = con.getRent(ID_Mem,id_room,Date_checkin);
+        Call call = con.getRent(ID_Mem, id_room, Date_checkin);
         call.enqueue(new Callback<RentModel>() {
             @Override
             public void onResponse(Response<RentModel> response, Retrofit retrofit) {
@@ -295,6 +296,29 @@ public class ConnectionManager {
                 } else {
                     //200
                     listener.onResponse(rentModel, retrofit);
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+
+            }
+        });
+
+    }
+
+    public void getDeposit(final DepositCallbackListener listener, String idRoom, String deposit) {
+        Call call = con.getDeposit(idRoom, deposit);
+        call.enqueue(new Callback<DepositModel>() {
+            @Override
+            public void onResponse(Response<DepositModel> response, Retrofit retrofit) {
+                DepositModel depositModel = response.body();
+                if (depositModel == null) {
+                    //404 or the response cannot be converted to User.
+                    ResponseBody responseBody = response.errorBody();
+                } else {
+                    //200
+                    listener.onResponse(depositModel, retrofit);
                 }
             }
 

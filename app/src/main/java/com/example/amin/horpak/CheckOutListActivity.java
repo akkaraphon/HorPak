@@ -18,7 +18,6 @@ public class CheckOutListActivity extends AppCompatActivity {
     RecyclerView mRecyclerView;
     RoomAdapter adapter;
     GridLayoutManager gridLayoutManager;
-    List<String> list = new ArrayList<>();
     Intent intent;
 
     @Override
@@ -26,14 +25,13 @@ public class CheckOutListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_out_list);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.ReWater);
+        mRecyclerView = (RecyclerView) findViewById(R.id.reRoomOut);
         adapter = new RoomAdapter(getApplicationContext(), StaticClass.roomModel.getDetail(), new RoomAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(List<RoomModel.DetailBean> topic, int position) {
-                StaticClass.toast(getApplicationContext(),topic.get(position).getNo_Room());
-                intent = new Intent(CheckOutListActivity.this, MeterActivity.class);
-                intent.putExtra("type", "water");
-                intent.putExtra("room", topic.get(position).getNo_Room());
+                StaticClass.toast(getApplicationContext(),topic.get(position).getID_Room());
+                intent = new Intent(CheckOutListActivity.this, CheckoutActivity.class);
+//                intent.putExtra("room", topic.get(position).getNo_Room());
                 intent.putExtra("td", topic.get(position).getID_Room());
                 startActivity(intent);
             }

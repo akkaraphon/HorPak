@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         public void onResponse(RoomModel roomModel, Retrofit retrofit) {
             StaticClass.roomModel = roomModel;
 //            StaticClass.toast(getApplicationContext(),"ready");
-            Log.d(TAG, "onResponse: ready");
+            Log.d(TAG, "onResponse: roomModel");
 
         }
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         public void onResponse(RoomModel roomModel, Retrofit retrofit) {
             StaticClass.roomModelAll = roomModel;
 //            StaticClass.toast(getApplicationContext(),"ready");
-            Log.d(TAG, "onResponse: ready");
+            Log.d(TAG, "onResponse: roomModelAll");
 
         }
 
@@ -105,8 +105,6 @@ public class MainActivity extends AppCompatActivity {
 
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-        connect.getRoom(roomCallbackListener,"blank");
-        connect.getRoom(roomCallbackListener2,"all");
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 //        tabLayout.setupWithViewPager(mViewPager,false);
         token = FirebaseInstanceId.getInstance().getToken();
@@ -114,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
 
         connect.postNoti(notiCallbackListener, token);
         connect.getProfile(profileCallbackListener, token);
+        connect.getRoom(roomCallbackListener,"blank");
+        connect.getRoom(roomCallbackListener2,"all");
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));

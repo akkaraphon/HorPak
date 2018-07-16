@@ -22,7 +22,7 @@ import retrofit.Retrofit;
 public class RentRoomActivity extends AppCompatActivity {
 
     RecyclerView mRecyclerView;
-    RoomAdapter adapter;
+        RoomAdapter adapter;
     GridLayoutManager gridLayoutManager;
     List<String> list = new ArrayList<>();
     Intent intent;
@@ -86,6 +86,7 @@ public class RentRoomActivity extends AppCompatActivity {
                 intent.putExtra("idRoom", topic.get(position).getID_Room());
                 intent.putExtra("position", position);
                 startActivity(intent);
+                finish();
             }
         });
         mRecyclerView.setAdapter(adapter);

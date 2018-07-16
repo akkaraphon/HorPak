@@ -21,7 +21,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class StaticClass {
-    public static String URL = "http://192.168.43.14/Project/api/";
+    public static String URL = "http://192.168.43.121/Project/startbootstrap-sb-admin-gh-pages/";
     public static int MOVE = 0;
     public static String TYPE_ROOM;
     public static LoginModel loginModel;

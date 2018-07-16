@@ -24,10 +24,12 @@ import com.example.amin.horpak.Model.LogoutModel;
 import com.example.amin.horpak.MoveOutActivity;
 import com.example.amin.horpak.PowerActivity;
 import com.example.amin.horpak.R;
+import com.example.amin.horpak.ReciveActivity;
 import com.example.amin.horpak.RentRoomActivity;
 import com.example.amin.horpak.Utils.StaticClass;
 import com.example.amin.horpak.UpidActivity;
 import com.example.amin.horpak.WaterActivity;
+
 import com.google.firebase.iid.FirebaseInstanceId;
 
 import retrofit.Retrofit;
@@ -105,26 +107,31 @@ public class MoreFragment extends Fragment {
                 if (StaticClass.loginModel.getStatus().equals("ผู้เช่ารายเดือน")) {
                     switch (position) {
                         case 0:
-                            Toast.makeText(getActivity(), "ประวัติการซ่อม", Toast.LENGTH_SHORT).show();
-                            intent = new Intent(getActivity(), UpidActivity.class);
+                            Toast.makeText(getActivity(), "จองห้องพักรายวัน", Toast.LENGTH_SHORT).show();
+                            intent = new Intent(getActivity(), RentRoomActivity.class);
                             startActivity(intent);
                             break;
                         case 1:
-                            Toast.makeText(getActivity(), "อัพโหลดหลักฐาน", Toast.LENGTH_SHORT).show();
-//                            intent = new Intent(getActivity(), MoveActivity.class);
+                            Toast.makeText(getActivity(), "ประวัติการซ่อม", Toast.LENGTH_SHORT).show();
+//                            intent = new Intent(getActivity(), UpidActivity.class);
 //                            startActivity(intent);
                             break;
                         case 2:
-                            Toast.makeText(getActivity(), "พัสดุ", Toast.LENGTH_SHORT).show();
-//                            intent = new Intent(getActivity(), ViewProfileActivity.class);
-//                            startActivity(intent);
+                            Toast.makeText(getActivity(), "อัพโหลดหลักฐาน", Toast.LENGTH_SHORT).show();
+                            intent = new Intent(getActivity(), ReciveActivity.class);
+                            startActivity(intent);
                             break;
                         case 3:
+                            Toast.makeText(getActivity(), "พัสดุ", Toast.LENGTH_SHORT).show();
+//                            intent = new Intent(getActivity(), listActivity.class);
+//                            startActivity(intent);
+                            break;
+                        case 4:
                             Toast.makeText(getActivity(), "ย้ายห้อง", Toast.LENGTH_SHORT).show();
 //                            intent = new Intent(getActivity(), ViewProfileActivity.class);
 //                            startActivity(intent);
                             break;
-                        case 4:
+                        case 5:
                             Toast.makeText(getActivity(), "ย้ายออก", Toast.LENGTH_SHORT).show();
                             intent = new Intent(getActivity(), MoveOutActivity.class);
                             startActivity(intent);
@@ -162,6 +169,11 @@ public class MoreFragment extends Fragment {
                             break;
                         case 2:
                             Toast.makeText(getActivity(), "ตรวจห้อง", Toast.LENGTH_SHORT).show();
+                            intent = new Intent(getActivity(), CheckOutListActivity.class);
+                            startActivity(intent);
+                            break;
+                        case 3:
+                            Toast.makeText(getActivity(), "เพิ่มรายเซ็น", Toast.LENGTH_SHORT).show();
                             intent = new Intent(getActivity(), CheckOutListActivity.class);
                             startActivity(intent);
                             break;

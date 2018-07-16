@@ -120,6 +120,17 @@
         <activity
             android:name=".RentelActivity"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ReciveActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".HistoryActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CheckoutActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".listActivity" />
+        <activity android:name=".AddSignatureActivity"></activity>
     </application>
 
 </manifest>

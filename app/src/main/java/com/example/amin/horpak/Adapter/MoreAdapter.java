@@ -53,26 +53,31 @@ public class MoreAdapter extends BaseAdapter {
         if (StaticClass.loginModel.getStatus().equals("ผู้เช่ารายเดือน")) {
             switch (position) {
                 case 0:
+                    textView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_moveroom, 0, 0);
+                    textView.setText("จองห้องพักรายวัน");
+                    textView.setGravity(Gravity.CENTER);
+                    break;
+                case 1:
                     textView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_build, 0, 0);
                     textView.setText("ประวัติการซ่อม");
                     textView.setGravity(Gravity.CENTER);
                     break;
-                case 1:
+                case 2:
                     textView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_upload, 0, 0);
                     textView.setText("อัพโหลดหลักฐาน");
                     textView.setGravity(Gravity.CENTER);
                     break;
-                case 2:
+                case 3:
                     textView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_mail, 0, 0);
                     textView.setText("พัสดุ");
                     textView.setGravity(Gravity.CENTER);
                     break;
-                case 3:
+                case 4:
                     textView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_moveroom, 0, 0);
                     textView.setText("ย้ายห้อง");
                     textView.setGravity(Gravity.CENTER);
                     break;
-                case 4:
+                case 5:
                     textView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_moveout, 0, 0);
                     textView.setText("ย้ายออก");
                     textView.setGravity(Gravity.CENTER);
@@ -112,6 +117,11 @@ public class MoreAdapter extends BaseAdapter {
                 case 2:
                     textView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_moveout, 0, 0);
                     textView.setText("ตรวจห้อง");
+                    textView.setGravity(Gravity.CENTER);
+                    break;
+                case 3:
+                    textView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_profile, 0, 0);
+                    textView.setText("เพิ่มรายเซ็น");
                     textView.setGravity(Gravity.CENTER);
                     break;
             }
