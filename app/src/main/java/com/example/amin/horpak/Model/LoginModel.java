@@ -2,14 +2,16 @@ package com.example.amin.horpak.Model;
 
 public class LoginModel {
 
+
     /**
      * StatusID : 1
      * Error :
-     * ID : root
+     * ID : admin
      * ID_mem : 1
-     * Name_Mem : สาม
-     * LName_Mem :
-     * status : ผู้เช่ารายเดือน
+     * Name_Mem : admin
+     * LName_Mem : null
+     * status : admin
+     * img_signature_lessor :
      */
 
     private String StatusID;
@@ -19,6 +21,7 @@ public class LoginModel {
     private String Name_Mem;
     private String LName_Mem;
     private String status;
+    private String img_signature_lessor;
 
     public String getStatusID() {
         return StatusID;
@@ -74,5 +77,13 @@ public class LoginModel {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getImg_signature_lessor() {
+        return img_signature_lessor;
+    }
+
+    public void setImg_signature_lessor(String img_signature_lessor) {
+        this.img_signature_lessor = img_signature_lessor;
     }
 }

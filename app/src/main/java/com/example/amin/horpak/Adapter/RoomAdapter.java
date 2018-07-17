@@ -30,7 +30,9 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.MenuViewHolder
 
     public interface OnItemClickListener {
         void onItemClick(List<RoomModel.DetailBean> topic, int position);
+
     }
+
 
     @Override
     public MenuViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

@@ -69,6 +69,22 @@ public class MainActivity extends AppCompatActivity {
 
     };
 
+    RoomCallbackListener roomCallbackListener3 = new RoomCallbackListener() {
+        @Override
+        public void onResponse(RoomModel roomModel, Retrofit retrofit) {
+            StaticClass.roomModelActive = roomModel;
+//            StaticClass.toast(getApplicationContext(),"ready");
+            Log.d(TAG, "onResponse: roomModelAll");
+
+        }
+
+        @Override
+        public void onFailure(Throwable t) {
+            Log.d(TAG, "onFailure: " + t);
+        }
+
+    };
+
     NotiCallbackListener notiCallbackListener = new NotiCallbackListener() {
         @Override
         public void onResponse(NotiModel notiModel, Retrofit retrofit) {
@@ -113,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         connect.postNoti(notiCallbackListener, token);
         connect.getProfile(profileCallbackListener, token);
         connect.getRoom(roomCallbackListener,"blank");
+        connect.getRoom(roomCallbackListener3,"noblank");
         connect.getRoom(roomCallbackListener2,"all");
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));

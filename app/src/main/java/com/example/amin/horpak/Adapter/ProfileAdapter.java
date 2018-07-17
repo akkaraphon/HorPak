@@ -25,10 +25,6 @@ public class ProfileAdapter implements View.OnClickListener{
     public ProfileAdapter init() {
         activity.setTheme(theme);
 
-        activity.findViewById(R.id.dark).setOnClickListener(this);
-        activity.findViewById(R.id.light).setOnClickListener(this);
-        activity.findViewById(R.id.custom).setOnClickListener(this);
-
         return this;
     }
 
@@ -85,29 +81,6 @@ public class ProfileAdapter implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.dark:
-                if (theme != R.style.AppThemeDark) {
-                    theme = R.style.AppThemeDark;
-                    activity.recreate();
-                }
-                break;
-            case R.id.light:
-                if (theme != R.style.AppThemeLight) {
-                    theme = R.style.AppThemeLight;
-                    activity.recreate();
-                }
-                break;
 
-            case R.id.custom:
-                if (theme != R.style.AppThemeCustom) {
-                    theme = R.style.AppThemeCustom;
-                    activity.recreate();
-                }
-                break;
-
-            default:
-                break;
-        }
     }
 }

@@ -25,7 +25,7 @@ public class MoreAdapter extends BaseAdapter {
         if (StaticClass.loginModel.getStatus().equals("ผู้เช่ารายเดือน")) {
             return 5;
         } else {
-            return 3;
+            return 4;
         }
     }
 
@@ -120,7 +120,7 @@ public class MoreAdapter extends BaseAdapter {
                     textView.setGravity(Gravity.CENTER);
                     break;
                 case 3:
-                    textView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_profile, 0, 0);
+                    textView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_personnew, 0, 0);
                     textView.setText("เพิ่มรายเซ็น");
                     textView.setGravity(Gravity.CENTER);
                     break;

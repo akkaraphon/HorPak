@@ -29,6 +29,12 @@ public interface UploadService {
     Call<UpPicModel> uploadID(@Part MultipartBody.Part file,
                                 @Part("file") RequestBody name,
                                 @Part("id_rentel") RequestBody id_rentel);
+
+    @Multipart
+    @POST("getPicemployee.php")
+    Call<UpPicModel> getPicemployee(@Part MultipartBody.Part file,
+                              @Part("file") RequestBody name,
+                              @Part("idemp") RequestBody idemp);
 }
 
 

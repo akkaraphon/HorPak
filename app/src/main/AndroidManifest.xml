@@ -129,8 +129,9 @@
         <activity
             android:name=".CheckoutActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".listActivity" />
-        <activity android:name=".AddSignatureActivity"></activity>
+        <activity
+            android:name=".AddSignatureActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

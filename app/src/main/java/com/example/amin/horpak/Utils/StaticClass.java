@@ -27,6 +27,7 @@ public class StaticClass {
     public static LoginModel loginModel;
     public static RoomModel roomModel;
     public static RoomModel roomModelAll;
+    public static RoomModel roomModelActive;
     public static NotiModel notiModel;
     public static ProfileModel profileModel;
     public static AgrementModel agrement;

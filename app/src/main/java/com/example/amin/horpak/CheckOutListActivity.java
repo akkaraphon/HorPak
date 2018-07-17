@@ -26,7 +26,7 @@ public class CheckOutListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_check_out_list);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.reRoomOut);
-        adapter = new RoomAdapter(getApplicationContext(), StaticClass.roomModel.getDetail(), new RoomAdapter.OnItemClickListener() {
+        adapter = new RoomAdapter(getApplicationContext(), StaticClass.roomModelActive.getDetail(), new RoomAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(List<RoomModel.DetailBean> topic, int position) {
                 StaticClass.toast(getApplicationContext(),topic.get(position).getID_Room());

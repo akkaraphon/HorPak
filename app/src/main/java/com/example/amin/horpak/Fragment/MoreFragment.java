@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.example.amin.horpak.API.ConnectionManager;
 import com.example.amin.horpak.API.LogoutCallbackListener;
 import com.example.amin.horpak.Adapter.MoreAdapter;
+import com.example.amin.horpak.AddSignatureActivity;
 import com.example.amin.horpak.CheckOutListActivity;
 import com.example.amin.horpak.Model.LogoutModel;
 import com.example.amin.horpak.MoveOutActivity;
@@ -174,7 +175,7 @@ public class MoreFragment extends Fragment {
                             break;
                         case 3:
                             Toast.makeText(getActivity(), "เพิ่มรายเซ็น", Toast.LENGTH_SHORT).show();
-                            intent = new Intent(getActivity(), CheckOutListActivity.class);
+                            intent = new Intent(getActivity(), AddSignatureActivity.class);
                             startActivity(intent);
                             break;
                     }
