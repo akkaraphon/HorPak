@@ -22,7 +22,7 @@ import retrofit.Retrofit;
 public class RentRoomActivity extends AppCompatActivity {
 
     RecyclerView mRecyclerView;
-        RoomAdapter adapter;
+    RoomAdapter adapter;
     GridLayoutManager gridLayoutManager;
     List<String> list = new ArrayList<>();
     Intent intent;

@@ -14,6 +14,7 @@ import android.view.MenuItem;
 
 import com.example.amin.horpak.API.ConnectionManager;
 import com.example.amin.horpak.API.NotiCallbackListener;
+import com.example.amin.horpak.API.PostCallbackListener;
 import com.example.amin.horpak.API.ProfileCallbackListener;
 import com.example.amin.horpak.API.RoomCallbackListener;
 import com.example.amin.horpak.Fragment.ChatFragment;
@@ -22,6 +23,7 @@ import com.example.amin.horpak.Fragment.MoreFragment;
 import com.example.amin.horpak.Fragment.NotiFragment;
 import com.example.amin.horpak.Fragment.ProfileFragment;
 import com.example.amin.horpak.Model.NotiModel;
+import com.example.amin.horpak.Model.PostModel;
 import com.example.amin.horpak.Model.ProfileModel;
 import com.example.amin.horpak.Model.RoomModel;
 import com.example.amin.horpak.Utils.StaticClass;
@@ -32,7 +34,7 @@ import retrofit.Retrofit;
 public class MainActivity extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
-    String TAG = "Main";
+    String TAG = "MainActivity";
     String token;
 
     private ViewPager mViewPager;
@@ -85,6 +87,22 @@ public class MainActivity extends AppCompatActivity {
 
     };
 
+    RoomCallbackListener roomCallbackListener4 = new RoomCallbackListener() {
+        @Override
+        public void onResponse(RoomModel roomModel, Retrofit retrofit) {
+            StaticClass.roomModelMy = roomModel;
+//            StaticClass.toast(getApplicationContext(),"ready");
+            Log.d(TAG, "onResponse: roomModelAll");
+
+        }
+
+        @Override
+        public void onFailure(Throwable t) {
+            Log.d(TAG, "onFailure: " + t);
+        }
+
+    };
+
     NotiCallbackListener notiCallbackListener = new NotiCallbackListener() {
         @Override
         public void onResponse(NotiModel notiModel, Retrofit retrofit) {
@@ -112,6 +130,33 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    PostCallbackListener postCallbackListener = new PostCallbackListener() {
+        @Override
+        public void onResponse(PostModel postModel, Retrofit retrofit) {
+            Log.d(TAG, "onResponse: My" + postModel.getDetail().size());
+            StaticClass.postModel = postModel;
+        }
+
+        @Override
+        public void onFailure(Throwable t) {
+            Log.d(TAG, "onFailure: " + t.getMessage());
+        }
+    };
+
+    PostCallbackListener postCallbackListener2 = new PostCallbackListener() {
+        @Override
+        public void onResponse(PostModel postModel, Retrofit retrofit) {
+            Log.d(TAG, "onResponse: All" + postModel.getDetail().size());
+            StaticClass.postModelAll = postModel;
+
+        }
+
+        @Override
+        public void onFailure(Throwable t) {
+            Log.d(TAG, "onFailure: " + t.getMessage());
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -131,6 +176,9 @@ public class MainActivity extends AppCompatActivity {
         connect.getRoom(roomCallbackListener,"blank");
         connect.getRoom(roomCallbackListener3,"noblank");
         connect.getRoom(roomCallbackListener2,"all");
+        connect.getMyRoom(roomCallbackListener4,"myRoom",StaticClass.loginModel.getID_mem());
+        connect.getPost(postCallbackListener, StaticClass.loginModel.getID_mem());
+        connect.getPost(postCallbackListener2, "0");
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));

@@ -24,6 +24,8 @@ public class MoreAdapter extends BaseAdapter {
     public int getCount() {
         if (StaticClass.loginModel.getStatus().equals("ผู้เช่ารายเดือน")) {
             return 5;
+        }else if (StaticClass.loginModel.getStatus().equals("สมาชิก")) {
+            return 3;
         } else {
             return 4;
         }

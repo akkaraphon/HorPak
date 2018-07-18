@@ -35,6 +35,7 @@
     <string name="light_theme">Light Theme</string>
     <string name="custom_theme">Custom Theme</string>
     <string name="date">Date</string>
+    <string name="title_activity_post">พัสดุ</string>
 
 
 </resources>

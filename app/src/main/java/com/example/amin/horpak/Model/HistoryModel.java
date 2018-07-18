@@ -4,9 +4,10 @@ import java.util.List;
 
 public class HistoryModel {
 
+
     /**
      * StatusID : 1
-     * Detail : [{"ID_Room":"61","No_Room":"202","Price":"3000","Floor":"2","Status":"noblank","Rental_type":"รายเดือน","Deposit":"300","Deposit_m":"6000","ID_typeroom":"9","ID_book":"30","Date_book":"2018-07-19","Date_checkin":"2018-07-21","date_checkout1":"0000-00-00","Date_deposit":"2018-07-19","Date_recheck":"0000-00-00","img_book":"1430748825-1119554110-o.jpg","status_book":"รับห้องพักเรียบร้อย","ID_Mem":"1"},{"ID_Room":"53","No_Room":"104","Price":"500","Floor":"1","Status":"blank","Rental_type":"รายวัน","Deposit":"250","Deposit_m":"500","ID_typeroom":"9","ID_book":"34","Date_book":"2018-07-16","Date_checkin":"2018-07-18","date_checkout1":"2018-07-19","Date_deposit":"2018-07-16","Date_recheck":"0000-00-00","img_book":"1430748825-1119554110-o.jpg","status_book":"รอการยืนยันการจ่ายค่ามัดจำ","ID_Mem":"1"}]
+     * Detail : [{"ID_Room":"61","No_Room":"202","Price":"3000","Floor":"2","Status":"Reservations","Rental_type":"รายเดือน","Deposit":"300","Deposit_m":"6000","ID_typeroom":"9","ID_book":"35","Date_book":"2018-07-18","Date_checkin":"2018-07-20","date_checkout1":"0000-00-00","Date_deposit":"0000-00-00","Date_recheck":"0000-00-00","img_book":"","status_book":"รอการชำระค่ามัดจำ","ID_Mem":"1"},{"ID_Room":"50","No_Room":"101","Price":"500","Floor":"1","Status":"blank","Rental_type":"รายวัน","Deposit":"250","Deposit_m":"500","ID_typeroom":"9","ID_book":"36","Date_book":"2018-07-18","Date_checkin":"2018-07-20","date_checkout1":"2018-07-21","Date_deposit":"0000-00-00","Date_recheck":"0000-00-00","img_book":"","status_book":"รอการชำระค่ามัดจำ","ID_Mem":"1"}]
      */
 
     private String StatusID;
@@ -34,19 +35,19 @@ public class HistoryModel {
          * No_Room : 202
          * Price : 3000
          * Floor : 2
-         * Status : noblank
+         * Status : Reservations
          * Rental_type : รายเดือน
          * Deposit : 300
          * Deposit_m : 6000
          * ID_typeroom : 9
-         * ID_book : 30
-         * Date_book : 2018-07-19
-         * Date_checkin : 2018-07-21
+         * ID_book : 35
+         * Date_book : 2018-07-18
+         * Date_checkin : 2018-07-20
          * date_checkout1 : 0000-00-00
-         * Date_deposit : 2018-07-19
+         * Date_deposit : 0000-00-00
          * Date_recheck : 0000-00-00
-         * img_book : 1430748825-1119554110-o.jpg
-         * status_book : รับห้องพักเรียบร้อย
+         * img_book :
+         * status_book : รอการชำระค่ามัดจำ
          * ID_Mem : 1
          */
 

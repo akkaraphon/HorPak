@@ -6,6 +6,7 @@ import com.example.amin.horpak.Model.LoginModel;
 import com.example.amin.horpak.Model.LogoutModel;
 import com.example.amin.horpak.Model.MoveoutModel;
 import com.example.amin.horpak.Model.NotiModel;
+import com.example.amin.horpak.Model.PostModel;
 import com.example.amin.horpak.Model.ProfileModel;
 import com.example.amin.horpak.Model.RentModel;
 import com.example.amin.horpak.Model.RoomModel;
@@ -36,6 +37,12 @@ public interface APIService {
     @POST("getRoom.php")
     Call<RoomModel> getRoom(
             @Field("status") String status);
+
+    @FormUrlEncoded
+    @POST("getRoom.php")
+    Call<RoomModel> getMyRoom(
+            @Field("status") String status,
+            @Field("idmem") String idmem);
 
     @FormUrlEncoded
     @POST("InsertWP.php")
@@ -90,5 +97,12 @@ public interface APIService {
     Call<DepositModel> getDeposit(
             @Field("idRoom") String idRoom,
             @Field("deposit") String deposit);
+
+    @FormUrlEncoded
+    @POST("getPost.php")
+    Call<PostModel> getPost(
+            @Field("idmem") String ID_Mem);
+
+
 
 }

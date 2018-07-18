@@ -51,6 +51,15 @@ public class RoomModel {
         private String Deposit_m;
         private String ID_typeroom;
         private String name_typeroom;
+        private String ID_book;
+        private String Date_book;
+        private String Date_checkin;
+        private String date_checkout1;
+        private String Date_deposit;
+        private String Date_recheck;
+        private String img_book;
+        private String status_book;
+        private String ID_Mem;
 
         public String getID_Room() {
             return ID_Room;
@@ -130,6 +139,78 @@ public class RoomModel {
 
         public void setName_typeroom(String name_typeroom) {
             this.name_typeroom = name_typeroom;
+        }
+
+        public String getID_book() {
+            return ID_book;
+        }
+
+        public void setID_book(String ID_book) {
+            this.ID_book = ID_book;
+        }
+
+        public String getDate_book() {
+            return Date_book;
+        }
+
+        public void setDate_book(String Date_book) {
+            this.Date_book = Date_book;
+        }
+
+        public String getDate_checkin() {
+            return Date_checkin;
+        }
+
+        public void setDate_checkin(String Date_checkin) {
+            this.Date_checkin = Date_checkin;
+        }
+
+        public String getDate_checkout1() {
+            return date_checkout1;
+        }
+
+        public void setDate_checkout1(String date_checkout1) {
+            this.date_checkout1 = date_checkout1;
+        }
+
+        public String getDate_deposit() {
+            return Date_deposit;
+        }
+
+        public void setDate_deposit(String Date_deposit) {
+            this.Date_deposit = Date_deposit;
+        }
+
+        public String getDate_recheck() {
+            return Date_recheck;
+        }
+
+        public void setDate_recheck(String Date_recheck) {
+            this.Date_recheck = Date_recheck;
+        }
+
+        public String getImg_book() {
+            return img_book;
+        }
+
+        public void setImg_book(String img_book) {
+            this.img_book = img_book;
+        }
+
+        public String getStatus_book() {
+            return status_book;
+        }
+
+        public void setStatus_book(String status_book) {
+            this.status_book = status_book;
+        }
+
+        public String getID_Mem() {
+            return ID_Mem;
+        }
+
+        public void setID_Mem(String ID_Mem) {
+            this.ID_Mem = ID_Mem;
         }
     }
 }

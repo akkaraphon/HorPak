@@ -2,12 +2,15 @@ package com.example.amin.horpak.API;
 
 import android.util.Log;
 
+import com.example.amin.horpak.HistoryActivity;
 import com.example.amin.horpak.Model.AgrementModel;
 import com.example.amin.horpak.Model.DepositModel;
+import com.example.amin.horpak.Model.HistoryModel;
 import com.example.amin.horpak.Model.LoginModel;
 import com.example.amin.horpak.Model.LogoutModel;
 import com.example.amin.horpak.Model.MoveoutModel;
 import com.example.amin.horpak.Model.NotiModel;
+import com.example.amin.horpak.Model.PostModel;
 import com.example.amin.horpak.Model.ProfileModel;
 import com.example.amin.horpak.Model.RentModel;
 import com.example.amin.horpak.Model.RoomModel;
@@ -81,6 +84,52 @@ public class ConnectionManager {
                 } else {
                     //200
                     listener.onResponse(room, retrofit);
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+
+            }
+        });
+
+    }
+
+    public void getMyRoom(final RoomCallbackListener listener, String status, String idMem) {
+        Call call = con.getMyRoom(status, idMem);
+        call.enqueue(new Callback<RoomModel>() {
+            @Override
+            public void onResponse(Response<RoomModel> response, Retrofit retrofit) {
+                RoomModel room = response.body();
+                if (room == null) {
+                    //404 or the response cannot be converted to User.
+                    ResponseBody responseBody = response.errorBody();
+                } else {
+                    //200
+                    listener.onResponse(room, retrofit);
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+
+            }
+        });
+
+    }
+
+    public void getPost(final PostCallbackListener listener, String idMem) {
+        Call call = con.getPost(idMem);
+        call.enqueue(new Callback<PostModel>() {
+            @Override
+            public void onResponse(Response<PostModel> response, Retrofit retrofit) {
+                PostModel post = response.body();
+                if (post == null) {
+                    //404 or the response cannot be converted to User.
+                    ResponseBody responseBody = response.errorBody();
+                } else {
+                    //200
+                    listener.onResponse(post, retrofit);
                 }
             }
 
@@ -329,5 +378,6 @@ public class ConnectionManager {
         });
 
     }
+
 
 }

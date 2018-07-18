@@ -21,8 +21,10 @@ import com.example.amin.horpak.API.LogoutCallbackListener;
 import com.example.amin.horpak.Adapter.MoreAdapter;
 import com.example.amin.horpak.AddSignatureActivity;
 import com.example.amin.horpak.CheckOutListActivity;
+import com.example.amin.horpak.HistoryActivity;
 import com.example.amin.horpak.Model.LogoutModel;
 import com.example.amin.horpak.MoveOutActivity;
+import com.example.amin.horpak.PostActivity;
 import com.example.amin.horpak.PowerActivity;
 import com.example.amin.horpak.R;
 import com.example.amin.horpak.ReciveActivity;
@@ -124,8 +126,8 @@ public class MoreFragment extends Fragment {
                             break;
                         case 3:
                             Toast.makeText(getActivity(), "พัสดุ", Toast.LENGTH_SHORT).show();
-//                            intent = new Intent(getActivity(), listActivity.class);
-//                            startActivity(intent);
+                            intent = new Intent(getActivity(), PostActivity.class);
+                            startActivity(intent);
                             break;
                         case 4:
                             Toast.makeText(getActivity(), "ย้ายห้อง", Toast.LENGTH_SHORT).show();
@@ -152,8 +154,8 @@ public class MoreFragment extends Fragment {
                             break;
                         case 2:
                             Toast.makeText(getActivity(), "ประวัติการจอง", Toast.LENGTH_SHORT).show();
-//                            intent = new Intent(getActivity(), UpidActivity.class);
-//                            startActivity(intent);
+                            intent = new Intent(getActivity(), HistoryActivity.class);
+                            startActivity(intent);
                             break;
                     }
                 } else {

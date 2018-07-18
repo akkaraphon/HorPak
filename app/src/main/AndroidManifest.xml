@@ -132,6 +132,16 @@
         <activity
             android:name=".AddSignatureActivity"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".HistoryViewActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PostActivity"
+            android:label="@string/title_activity_post"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PostViewActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

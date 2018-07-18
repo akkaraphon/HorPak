@@ -9,8 +9,10 @@ import android.view.Gravity;
 import android.widget.Toast;
 
 import com.example.amin.horpak.Model.AgrementModel;
+import com.example.amin.horpak.Model.HistoryModel;
 import com.example.amin.horpak.Model.LoginModel;
 import com.example.amin.horpak.Model.NotiModel;
+import com.example.amin.horpak.Model.PostModel;
 import com.example.amin.horpak.Model.ProfileModel;
 import com.example.amin.horpak.Model.RoomModel;
 
@@ -22,13 +24,17 @@ import java.io.IOException;
 
 public class StaticClass {
     public static String URL = "http://192.168.43.121/Project/startbootstrap-sb-admin-gh-pages/";
+
     public static int MOVE = 0;
     public static String TYPE_ROOM;
     public static LoginModel loginModel;
     public static RoomModel roomModel;
     public static RoomModel roomModelAll;
     public static RoomModel roomModelActive;
+    public static RoomModel roomModelMy;
     public static NotiModel notiModel;
+    public static PostModel postModel;
+    public static PostModel postModelAll;
     public static ProfileModel profileModel;
     public static AgrementModel agrement;
     public static RoomModel RoomRentModel;

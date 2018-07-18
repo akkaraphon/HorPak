@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.example.amin.horpak.Utils.StaticClass;
 
 import java.io.File;
+import java.util.Calendar;
 
 public class ReciveActivity extends AppCompatActivity {
 
@@ -30,6 +31,7 @@ public class ReciveActivity extends AppCompatActivity {
     final Activity activity = this;
     public Uri imageUri;
 
+    Calendar calendar = Calendar.getInstance();
     String mYear;
     String mMonth;
     String mDayOfMonth;
@@ -51,7 +53,8 @@ public class ReciveActivity extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.webView);
 
         // Define url that will open in webview
-        String webViewUrl = StaticClass.URL + "bill2.php?ID_bill=1&ID_Room=61&bill_month=%E0%B8%81%E0%B8%A3%E0%B8%81%E0%B8%8F%E0%B8%B2%E0%B8%84%E0%B8%A1&bill_year=2561&from=app";
+        String webViewUrl = StaticClass.URL + "bill2.php?ID_bill=1&ID_Room=61&bill_month=%E0%B8%81%E0%B8%A3%E0%B8%81%E0%B8%8F%E0%B8%B2%E0%B8%84%E0%B8%A1&bill_year="
+                + mYear + "&from=app";
 
 
         // Javascript inabled on webview
