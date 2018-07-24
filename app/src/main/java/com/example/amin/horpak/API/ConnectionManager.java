@@ -141,6 +141,29 @@ public class ConnectionManager {
 
     }
 
+    public void setPost(final PostCallbackListener listener, String idMem, String idPost) {
+        Call call = con.setPost(idMem, idPost);
+        call.enqueue(new Callback<PostModel>() {
+            @Override
+            public void onResponse(Response<PostModel> response, Retrofit retrofit) {
+                PostModel post = response.body();
+                if (post == null) {
+                    //404 or the response cannot be converted to User.
+                    ResponseBody responseBody = response.errorBody();
+                } else {
+                    //200
+                    listener.onResponse(post, retrofit);
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+
+            }
+        });
+
+    }
+
     public void postAgrement(final AgrementCallbackListener listener, String id_rental, String id_room) {
         Call call = con.postAgrement(id_rental, id_room);
         call.enqueue(new Callback<AgrementModel>() {

@@ -103,6 +103,12 @@ public interface APIService {
     Call<PostModel> getPost(
             @Field("idmem") String ID_Mem);
 
+    @FormUrlEncoded
+    @POST("setPost.php")
+    Call<PostModel> setPost(
+            @Field("idmem") String ID_Mem,
+            @Field("idPost") String idPost);
+
 
 
 }
