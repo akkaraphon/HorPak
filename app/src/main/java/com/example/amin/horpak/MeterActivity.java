@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.amin.horpak.API.ConnectionManager;
 import com.example.amin.horpak.API.WPCallbackListener;
 import com.example.amin.horpak.Model.WPModel;
+import com.example.amin.horpak.Utils.StaticClass;
 
 import retrofit.Retrofit;
 
@@ -36,7 +37,8 @@ public class MeterActivity extends AppCompatActivity {
         wpCallbackListener = new WPCallbackListener() {
             @Override
             public void onResponse(WPModel wpModel, Retrofit retrofit) {
-
+                StaticClass.toast(getApplicationContext(),"บันทึกสำเร็จ");
+                finish();
             }
 
             @Override
